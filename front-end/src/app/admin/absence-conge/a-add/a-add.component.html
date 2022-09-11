@@ -1,0 +1,48 @@
+<h2 class="center">Ajout d'un absence ou conge</h2>
+<div [hidden]="submitted" style="width: 400px;" class="col-md-6 offset-3">
+  <form (ngSubmit)="onSubmit()">
+  <div class="form_group">
+      <label for="employe">employe</label>
+      <select  class="form-control" name="sexe" id="sexe"
+       required
+       [(ngModel)]="absenceconge.employe"
+       #sexe="ngModel"
+      >
+      <option for="id_employe">homme</option>
+      </select>
+  </div>
+  <div class="form_group">
+      <label for="nom">Date Debut</label>
+      <input class="form-control" type="date" id="dateDebut"
+          name="dateDebut"
+          [(ngModel)]="absenceconge.dateDebut"
+          #dateDebut="ngModel"
+      >
+  </div>
+  <div class="form_group">
+   <label for="prenom">Jour</label>
+   <input class="form-control"type="date" id="jour"
+       name="jour"
+       [(ngModel)]="absenceconge.jour"
+       #jour="ngModel"
+   >
+   </div>
+   <div class="form_group">
+     <label for="duree">Durée</label>
+     <input class="form-control"type="text" id="duree"
+         name="duree"
+         [(ngModel)]="absenceconge.duree"
+         #duree="ngModel"
+     >
+   </div>
+ <div class="form_group">
+  <button type="submit" class="btn btn-info">Ajouter</button>
+ </div>
+ </form>
+</div>
+<div [hidden]="!submitted">
+  <h4>Ajouté avec succés</h4>
+</div>
+
+
+

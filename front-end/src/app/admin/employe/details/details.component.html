@@ -1,0 +1,146 @@
+<h3>Details Employe</h3>
+<div style="width: 400px;" class="col-md-6 offset-3">
+  <form>
+  <div class="form_group">
+      <label for="nom">Nom</label>
+      <input class="form-control" type="text" id="nom"
+          name="nom"
+          required
+          disabled
+          [(ngModel)]="employe.nom"
+          #nom="ngModel"
+       >
+   </div>
+   <div class="form_group">
+    <label for="prenom">Prenom</label>
+    <input class="form-control" type="text" id="prenom"
+        name="prenom"
+        required
+        disabled
+        [(ngModel)]="employe.prenom"
+        #prenom="ngModel"
+    >
+    </div>
+    <div class="form_group">
+      <label for="adresse">Adresse</label>
+      <input class="form-control" type="text" id="adresse"
+          name="adresse"
+          required
+          disabled
+          [(ngModel)]="employe.adresse"
+          #adresse="ngModel"
+      >
+  </div>
+  <div class="form_group">
+    <label for="email">Email</label>
+    <input class="form-control" type="email" id="email"
+        name="email"
+        required
+        disabled
+        [(ngModel)]="employe.email"
+        #email="ngModel"
+    >
+</div>
+<div class="form_group">
+  <label for="dateNaissance">Date naissance</label>
+  <input class="form-control" type="text" id="dateNaissance"
+      name="dateNaissance"
+      required
+      disabled
+      [(ngModel)]="employe.dateNaissance"
+      #dateNaissance="ngModel"
+  >
+</div>
+<div class="form_group">
+  <label for="telephone">Telephone</label>
+  <input class="form-control" type="tel" id="telephone"
+      name="telephone"
+      required
+      disabled
+      [(ngModel)]="employe.telephone"
+      #telephone="ngModel"
+  >
+</div>
+<div class="form_group">
+  <label for="sexe">Sexe</label>
+  <input class="form-control" type="text" id="sexe"
+      name="sexe"
+      required
+      disabled
+      [(ngModel)]="employe.sexe"
+      #sexe="ngModel"
+  >
+</div>
+<div class="form_group">
+  <label for="dateEmbauche">Date Embauche</label>
+  <input class="form-control" type="text" id="dateEmbauche"
+      name="dateEmbauche"
+      required
+      disabled
+      [(ngModel)]="employe.dateEmbauche"
+      #dateEmbauche="ngModel"
+  >
+</div>
+<div class="form_group">
+  <label for="numImmat">Numero Immatriculation</label>
+  <input class="form-control" type="text" id="numImmat"
+      name="numImmat"
+      required
+      disabled
+      [(ngModel)]="employe.numImmatriculation"
+      #numImmatriculation="ngModel"
+  >
+</div>
+<div class="form_group">
+  <label for="salaire">Salaire</label>
+  <input class="form-control" type="number" id="salaire"
+      name="salaire"
+      required
+      disabled
+      [(ngModel)]="employe.salaire"
+      #salaire="ngModel"
+  >
+</div>
+<div class="form_group">
+  <label for="deppartement">Deppartement</label>
+  <input class="form-control" type="text" id="deppartement"
+      name="deppartement"
+      required
+      disabled
+      [(ngModel)]="employe.deppartement"
+      #deppartement="ngModel"
+  >
+</div>
+<div class="form_group">
+  <label for="poste">Poste</label>
+  <input class="form-control" type="text" id="poste"
+      name="poste"
+      required
+      disabled
+      [(ngModel)]="employe.poste"
+      #poste="ngModel"
+  >
+</div>
+  <div class="form_group">
+    <label for="absenceConges">Absence</label>
+    <input class="form-control" type="text" id="absenceConges"
+        name="absenceConges"
+        required
+        [(ngModel)]="employe.absenceConges"
+        #absenceConges="ngModel"
+    >
+  </div>
+  <div class="form_group">
+    <label for="document">Document</label>
+    <input class="form-control" type="text" id="document"
+        name="document"
+        required
+        [(ngModel)]="employe.documents"
+        #document="ngModel"
+    >
+  </div>
+  <div class="form_group">
+    <button [routerLink]="['/admin/employe']" type="submit" class="btn btn-info">Retour</button>
+  </div>
+</form>
+</div>

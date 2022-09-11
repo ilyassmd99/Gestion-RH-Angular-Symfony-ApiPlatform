@@ -1,0 +1,27 @@
+<div style="width: 400px;" class="col-md-6 offset-3">
+  <br>
+  <form
+    name="form"
+    #f="ngForm"
+    (ngSubmit)="f.form.valid && onSubmit()"
+    >
+    <div class="form_group">
+      <label for="username">Username</label>
+      <input class="form-control" type="text" name="username" id="username"
+        [(ngModel)]="form.username" #username="ngModel" required>
+      <div class="form_error" *ngIf="username.errors && f.submitted">
+        Username is required
+      </div>
+    </div>
+    <div class="form_group">
+      <label for="password">Password</label>
+      <input class="form-control" type="password" name="password" id="password" [(ngModel)]="form.password" #password="ngModel" required>
+      <div class="form_error" *ngIf="password.errors && f.submitted">
+        Password is required
+      </div>
+    </div>
+    <div class="form_group">
+      <button type="submit" class="btn btn-info">Login</button>
+    </div>
+</form>
+

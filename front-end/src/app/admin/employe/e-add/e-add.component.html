@@ -1,0 +1,123 @@
+<h2 class="center">Ajout d'un employé</h2>
+<div [hidden]="submitted" style="width: 400px;" class="col-md-6 offset-3">
+  <form (ngSubmit)="onSubmit()">
+  <div class="form_group">
+      <label for="nom">Nom</label>
+      <input class="form-control" type="text" id="nom"
+          name="nom"
+          required
+          [(ngModel)]="employe.nom"
+          #nom="ngModel"
+      >
+  </div>
+  <div class="form_group">
+   <label for="prenom">Prenom</label>
+   <input class="form-control"type="text" id="prenom"
+       name="prenom"
+       required
+       [(ngModel)]="employe.prenom"
+       #prenom="ngModel"
+   >
+   </div>
+   <div class="form_group">
+     <label for="adresse">Adresse</label>
+     <input class="form-control"type="text" id="adresse"
+         name="adresse"
+         required
+         [(ngModel)]="employe.adresse"
+         #adresse="ngModel"
+     >
+ </div>
+ <div class="form_group">
+   <label for="email">Email</label>
+   <input class="form-control"type="email" id="email"
+       name="email"
+       required
+       [(ngModel)]="employe.email"
+       #email="ngModel"
+   >
+</div>
+<div class="form_group">
+ <label for="dateNaissance">Date naissance</label>
+ <input class="form-control"type="date" id="dateNaissance"
+     name="dateNaissance"
+     required
+     [(ngModel)]="employe.dateNaissance"
+     #dateNaissance="ngModel"
+ >
+</div>
+<div class="form_group">
+ <label for="telephone">Telephone</label>
+ <input class="form-control"type="tel" id="telephone"
+     name="telephone"
+     required
+     [(ngModel)]="employe.telephone"
+     #telephone="ngModel"
+ >
+</div>
+<div class="form_group">
+ <label for="sexe">Sexe</label>
+ <select  class="form-control" name="sexe" id="sexe"
+    required
+    [(ngModel)]="employe.sexe"
+    #sexe="ngModel"
+ >
+  <option value="homme">homme</option>
+  <option value="femme">femme</option>
+ </select>
+</div>
+<div class="form_group">
+ <label for="dateEmbauche">Date Embauche</label>
+ <input class="form-control"type="date" id="dateEmbauche"
+     name="dateEmbauche"
+     required
+     [(ngModel)]="employe.dateEmbauche"
+     #dateEmbauche="ngModel"
+ >
+</div>
+<div class="form_group">
+ <label for="numImmat">Numero Immatriculation</label>
+ <input class="form-control"type="text" id="numImmat"
+     name="numImmat"
+     required
+     [(ngModel)]="employe.numImmatriculation"
+     #numImmatriculation="ngModel"
+ >
+</div>
+<div class="form_group">
+ <label for="salaire">Salaire</label>
+ <input class="form-control"type="number" id="salaire"
+     name="salaire"
+     required
+     [(ngModel)]="employe.salaire"
+     #salaire="ngModel"
+ >
+</div>
+<div class="form_group">
+ <label for="deppartement">Deppartement</label>
+ <input class="form-control"type="text" id="deppartement"
+     name="deppartement"
+     required
+     [(ngModel)]="employe.deppartement"
+     #deppartement="ngModel"
+ >
+</div>
+<div class="form_group">
+ <label for="poste">Poste</label>
+ <input class="form-control" type="text" id="poste"
+     name="poste"
+     required
+     [(ngModel)]="employe.poste"
+     #poste="ngModel"
+ >
+ </div>
+ <div class="form_group">
+  <button onclick="return console.warn('This is a warning!')"class="btn btn-info" type="submit" class="btn btn-info">Ajouter</button>
+ </div>
+</form>
+</div>
+<div [hidden]="!submitted">
+  <h4>Employé ajouter avec succés</h4>
+</div>
+
+

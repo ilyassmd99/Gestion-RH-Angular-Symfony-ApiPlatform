@@ -1,0 +1,28 @@
+<div class="container-fluid  mt-2">
+  <div class="card-header"><h2>Liste des Absences-Congés</h2></div>
+ <div class="card-body">
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>Id</th>
+        <th>Id Emlpoyé</th>
+        <th>Date debut</th>
+        <th>Jour</th>
+        <th>Duree</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ab of absenceCongeService.list">
+        <td>{{ab.id}}</td>
+        <td>{{ab.employe}}</td>
+        <td>{{ab.dateDebut | date:'dd/mm/yyyy'}}</td>
+        <td>{{ab.jour | date:'dd/mm/yyyy'}}</td>
+        <td>{{ab.duree}}</td>
+        <td><a class="btn btn-info"[routerLink]="['edit', ab.id]">Modifier</a></td>
+        <td><a onclick="return confirm('Etes-vous sure de supprimer?')" class="btn btn-info" (click)="deleteAbsenceConge(ab)">Supprimer</a>
+      </tr>
+    </tbody>
+  </table>
+</div>

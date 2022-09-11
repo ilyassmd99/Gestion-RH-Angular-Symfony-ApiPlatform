@@ -1,0 +1,37 @@
+<h3>Modifier absence ou congé</h3>
+<div [hidden]="submitted" style="width: 400px;" class="col-md-6 offset-3">
+<form *ngIf="employe" (ngSubmit)="onSubmit()">
+  <div class="form_group">
+      <label for="dateDebut">Date Debut</label>
+      <input class="form-control" type="text" id="dateDebut"
+          name="dateDebut"
+          [(ngModel)]="employe.dateDebut"
+          #datedebut="ngModel"
+      >
+  </div>
+  <div class="form_group">
+   <label for="jour">Jour</label>
+   <input class="form-control" type="text" id="jour"
+       name="jour"
+       [(ngModel)]="employe.jour"
+       #jour="ngModel"
+   >
+   </div>
+   <div class="form_group">
+     <label for="duree">Durée</label>
+     <input class="form-control" type="text" id="duree"
+         name="duree"
+         [(ngModel)]="employe.duree"
+         #duree="ngModel"
+     >
+ </div>
+ <div class="form_group">
+  <button class="btn btn-info" type="submit">Modifier</button>
+</div>
+</form>
+</div>
+<div [hidden]="!submitted">
+  <h4>Modification avec succés</h4>
+</div>
+<h3 *ngIf="!employe" class="center">Aucun absence ou conge à éditer</h3>
+

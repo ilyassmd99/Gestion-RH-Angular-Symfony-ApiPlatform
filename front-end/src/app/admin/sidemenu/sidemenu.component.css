@@ -1,0 +1,11 @@
+#sidemenu{
+    list-style: none;
+    padding: 0px;
+}
+nav{
+  padding-left: 10px;
+}
+#sidemenu ul{
+  list-style: none;
+  padding: 8px;
+}
