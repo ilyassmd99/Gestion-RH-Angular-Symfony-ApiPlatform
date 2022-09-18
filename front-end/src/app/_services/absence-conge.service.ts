@@ -36,7 +36,7 @@ export class AbsenceCongeService {
     return this.http.get(this.url+'/'+id)
 
   }
-  addAbsenceConge(a: AbsenceConges): Observable<any>{
+  addAbsenceConge(a: AbsenceConges){
     return this.http.post<any>(this.url, a, { headers: this.headers }).pipe(tap(
       (newAbsenceConge: AbsenceConges) => console.log('absence ou conge ajouté')),
       catchError(this.handleError<AbsenceConges>('ajouter')))

@@ -54,9 +54,9 @@ class OpenApiFactory implements OpenApiFactoryInterface
             ]
         ]);*/
         
-        $meOperation = $openApi->getPaths()->getPath('/api/home')->getGet()->withParameters([]);
-        $mePathItem = $openApi->getPaths()->getPath('/api/home')->withGet($meOperation);
-        $openApi->getPaths()->addPath('/api/home',$mePathItem);
+        $meOperation = $openApi->getPaths()->getPath('/api/me')->getGet()->withParameters([]);
+        $mePathItem = $openApi->getPaths()->getPath('/api/me')->withGet($meOperation);
+        $openApi->getPaths()->addPath('/api/me',$mePathItem);
 
         $pathItem = new PathItem(
             post: new Operation(

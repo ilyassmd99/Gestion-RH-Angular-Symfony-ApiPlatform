@@ -31,12 +31,13 @@ export class DocumentService {
   getAllDocuments(): Observable<any>{
     return this.http.get(this.url)
   }
-  getDocument(): Observable<any>{
-    return this.http.get(this.url+'/+id')
+  getDocument(id : number): Observable<any>{
+    return this.http.get(this.url+'/'+id)
   }
 
   addDocument(d: Documents){
-    return this.http.post<any>(this.url, d, {headers: this.headers}).pipe(tap((newDocument: Documents)=> console.log('document added')),
+    return this.http.post<any>(this.url, d, {headers: this.headers}).pipe(tap(
+      (newDocument: Documents)=> console.log('document added')),
     catchError(this.handleError<Documents>('create'))
     )
   }

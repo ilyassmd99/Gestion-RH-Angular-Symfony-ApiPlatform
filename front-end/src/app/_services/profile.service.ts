@@ -8,7 +8,7 @@ import { Admins } from 'src/model/admin';
 })
 export class ProfileService {
 
-  url = 'http://localhost:8000/api/home'
+  url = 'http://localhost:8000/api/me'
   list! : Admins[]
 
   constructor(private http: HttpClient) { }

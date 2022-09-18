@@ -17,8 +17,8 @@
       <tr *ngFor="let ab of absenceCongeService.list">
         <td>{{ab.id}}</td>
         <td>{{ab.employe}}</td>
-        <td>{{ab.dateDebut | date:'dd/mm/yyyy'}}</td>
-        <td>{{ab.jour | date:'dd/mm/yyyy'}}</td>
+        <td>{{ab.dateDebut | date:'mediumDate'}}</td>
+        <td>{{ab.jour | date:'mediumDate'}}</td>
         <td>{{ab.duree}}</td>
         <td><a class="btn btn-info"[routerLink]="['edit', ab.id]">Modifier</a></td>
         <td><a onclick="return confirm('Etes-vous sure de supprimer?')" class="btn btn-info" (click)="deleteAbsenceConge(ab)">Supprimer</a>

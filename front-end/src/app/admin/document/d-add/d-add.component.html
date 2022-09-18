@@ -1,13 +1,16 @@
-<h2 class="center">Ajout d'un absence ou conge</h2>
+<h2 class="center">Ajout d'un document</h2>
 <div [hidden]="submitted" style="width: 400px;" class="col-md-6 offset-3">
   <form (ngSubmit)="onSubmit()">
   <div class="form_group">
-      <label for="document">Document</label>
-      <input class="form-control" type="text" id="document"
+      <label for="document">Type</label>
+      <select class="form-control" type="text" id="document"
           name="document"
           [(ngModel)]="document.titre"
           #titre="ngModel"
-      >
+      ><option for="id_employe">attestation de travail</option>
+      <option for="id_employe">attestation de stage</option>
+      <option for="id_employe">attestation de salaire </option>
+      </select>
   </div>
   <div class="form_group">
    <label for="date">Date</label>

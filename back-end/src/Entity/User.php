@@ -25,9 +25,9 @@ use Symfony\Component\Serializer\Annotation\Groups;
         'read' => false,
         'output' => false
     ],
-        'home' => [
+        'me' => [
             'pagination_enabled' => false,
-            'path' => '/home',
+            'path' => '/me',
             'method' => 'get',
             'controller' => MeController::class,
             'read' => false,

@@ -3,13 +3,11 @@
   <form (ngSubmit)="onSubmit()">
   <div class="form_group">
       <label for="employe">employe</label>
-      <select  class="form-control" name="sexe" id="sexe"
+      <input  class="form-control" name="sexe" id="sexe"
        required
        [(ngModel)]="absenceconge.employe"
        #sexe="ngModel"
       >
-      <option for="id_employe">homme</option>
-      </select>
   </div>
   <div class="form_group">
       <label for="nom">Date Debut</label>

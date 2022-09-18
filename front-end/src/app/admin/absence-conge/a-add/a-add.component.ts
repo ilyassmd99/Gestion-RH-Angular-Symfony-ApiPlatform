@@ -19,12 +19,14 @@ export class AAddComponent implements OnInit {
   absenceconge: AbsenceConges = new AbsenceConges();
   submitted = false;
 
-  constructor(private absenceCongeService: AbsenceCongeService, private ts: TokenService) { }
+  constructor(
+     private absenceCongeService: AbsenceCongeService,
+     private ts: TokenService) { }
 
   ngOnInit(): void {
   }
   onSubmit(){
-    this.submitted = true;
+    this.submitted = false;
     this.save();
   }
   newAbsenceConge():void{
